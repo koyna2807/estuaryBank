@@ -4,7 +4,7 @@
     require_once('connection.php');
 
     //PHP script to take data out of db
-    $sql = "SELECT * FROM `sluice bank`.`customers`";
+    $sql = "SELECT * FROM `estuaryBank`.`customers`";
     $result = $conn->query($sql);
 
 ?>
@@ -59,7 +59,7 @@ tr:nth-child(even) {
             <td><?php echo $row['account_num']; ?></td>
             <td><?php echo $row['current_balance']; ?></td>
             <!-- Link to send customer_id to the transaction page -->
-            <td><a href="transfer.php?c_id=<?php echo $row['customer_id']; ?>" target="_blank">Tranfer money</a></td>
+            <td><a href="transfer.php?c_id=<?php echo $row['customer_id']; ?>" target="_blank">Transfer money</a></td>
         </tr>
     <?php $i++; } ?>
 </table>

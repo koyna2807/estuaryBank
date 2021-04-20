@@ -1,8 +1,13 @@
+
+
 <?php 
     require_once('connection.php');
     session_start();
     $sql = "SELECT * FROM `transactions`";
     $result = $conn->query($sql);
+    if(!isset($_SESSION['transaction_successfull'])){
+      $success_msg = $_SESSION['success_msg'];
+}
     ?>
 
 
@@ -30,6 +35,7 @@ tr:nth-child(even) {
 <body>
 
 <?php if($result->num_rows > 0){ ?>
+        <?php echo $success_msg; ?>
         <h1>Transaction History</h1>
         <table>
             <thead>

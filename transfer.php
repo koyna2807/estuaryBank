@@ -104,28 +104,29 @@
             $conn->query($sql);
 
             //sending transaction details to the transaction table
-            $sql = "INSERT INTO `transactions` (`transaction_id`, `sender_acc_num`, `recipient_acc_num`, `amount`,  `timestamp`) VALUES (NULL, '$sender_acc_num', '$recipient_account_num', '$amount', current_timestamp())";
+            $sql = "INSERT INTO `transactions` (`transaction_id`, `sender_acc_num`, `recipient_acc_num`, `amount`,  `timestamp`) VALUES (NULL, $sender_acc_num, $recipient_account_num, $amount, current_timestamp())";
             $conn->query($sql);
 
-			 //after the transaction is complete, the details for the reciept are sent to the reciept page by session
-			 $sql = "SELECT * FROM transactions ORDER BY transaction_id DESC LIMIT 0, 1";
-			 $result = $conn->query($sql);
-			 $row = $result->fetch_assoc();
-			 $_SESSION['transaction_successfull'] = true;
+			 // //after the transaction is complete, the details for the reciept are sent to the reciept page by session
+			 // $sql = "SELECT * FROM transactions ORDER BY transaction_id DESC LIMIT 0, 1";
+			 // $result = $conn->query($sql);
+			 // $row = $result->fetch_assoc();
+			 // $_SESSION['transaction_successfull'] = true;
 			 $_SESSION['success_msg'] = 'Transaction successful';
-			 $_SESSION['sender_account_num'] = $sender_acc_num;
-			 $_SESSION['recipient_account_num'] = $recipient_account_num;
-			 $_SESSION['amount'] = $amount;
-			 $_SESSION['transaction_id'] = $row['transaction_id'];
-			 $_SESSION['transaction_time'] = $row['timestamp'];
-			 $_SESSION['reciept-working'] = 1;
+			 // $_SESSION['sender_account_num'] = $sender_acc_num;
+			 // $_SESSION['recipient_account_num'] = $recipient_account_num;
+			 // $_SESSION['amount'] = $amount;
+			 // $_SESSION['transaction_id'] = $row['transaction_id'];
+			 // $_SESSION['transaction_time'] = $row['timestamp'];
+			 // $_SESSION['reciept-working'] = 1;
 
 			$_SESSION['transaction_successfull'] = true;
 			header('Location: transactionHistory.php');
             exit;
+
+            
             
         }
-
 
     }
 
