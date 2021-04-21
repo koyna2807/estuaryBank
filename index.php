@@ -34,7 +34,7 @@
 	</div>
 
 
-	<footer style="margin-bottom: -10px; margin: auto; background-color: white; margin-top: 22vh; text-align: center; font-family: sans-serif;">
+	<footer style="margin-bottom: -10px; margin-top: 22vh; text-align: center; font-family: sans-serif;">
 		Developed by Koyna Sharma 
 	</footer>
 </body>
