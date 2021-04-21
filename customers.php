@@ -21,7 +21,7 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 2px solid darkgrey;
   text-align: left;
   padding: 8px;
 }
@@ -29,11 +29,96 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+
+.text-box {
+    margin-left: 44vw;
+   margin-top: 42vh;
+   text-align: right;
+   margin-top: -80px;
+   margin-right: 180px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 35px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    font-family: sans-serif;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 </style>
 </head>
-<body>
+<body style="background-color: #f2f2f2;">
 
-<h2>CUSTOMERS</h2>
+  <div style="height: 90px; width: 100%; background-color: #000066; margin-bottom: 30px; ">
+    <p style="color: white; font-family: sans-serif; font-size: 2.2rem; margin-left: 40vw; padding-top: 28px; font-weight:600;"> CUSTOMERS </p>
+    <div class="text-box">
+      <a href="index.php" class="btn btn-white btn-animate">HOME</a>
+    </div>
+    <div style="margin-right: 480px;" class="text-box">
+      <a href="transactionHistory.php" class="btn btn-white btn-animate">PREVIOUS TRANSACTIONS</a>
+    </div>
+  </div>
+
 
 <table>
   <tr>

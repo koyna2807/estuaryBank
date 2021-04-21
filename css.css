@@ -1,14 +1,14 @@
+
 body{
-	background-image: url(images/background.jpg);
-	background-repeat: no-repeat;
-	min-height: 100%;
-	min-width: 100%;
+	background-image: url(images/bank.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header{
 	min-width: 100%;
-	min-height: 150px;
-	background-color: lightblue;
+	min-height: 120px;
+	background-color: #0000036b;
 	margin-bottom: 100px;
 	margin-top: 40px;
 }
@@ -23,6 +23,9 @@ body{
 	margin-top: 200px;
 }
 
+#index-btns{
+    margin: auto;
+}
 
 .btn-success{
     color: #fff;
@@ -31,7 +34,7 @@ body{
 }
 
 .btn-success:hover{
-	background-color: #198699;
+	background-color: #0b3f27;
 }
 
 .btn{

@@ -139,19 +139,33 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="transferCSS.css">
+    <style type="text/css">
+        .input{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        .error{
+            color: red;
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
 	
 	  <div class="container">
-	    <h1>Transfer Amount</h1>
+	    <h1 style="text-align: center; font-size: xxx-large; font-family: sans-serif; color: aliceblue; background-color: rebeccapurple;">Transfer Amount</h1>
 	    <p>Please fill in these details</p>
 	    <hr>
 
 	    <label for="sen-name"><b>Sender's Name:</b></label>
-		<div><?php echo $sender_name; ?></div>
+		<div class="input"><?php echo $sender_name; ?></div>
 
 		<label for="sen-acc"><b>Sender's Account Number:</b></label>
-	    <div><?php echo $sender_acc_num; ?></div>
+	    <div class="input"><?php echo $sender_acc_num; ?></div>
 
 
 	<form action="" method="POST">
